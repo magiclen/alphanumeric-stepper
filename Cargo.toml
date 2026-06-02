@@ -1,0 +1,23 @@
+[package]
+name = "alphanumeric-stepper"
+version = "0.1.0"
+authors = ["Magic Len <len@magiclen.org>"]
+edition = "2024"
+rust-version = "1.85"
+repository = "https://github.com/magiclen/alphanumeric-stepper"
+homepage = "https://magiclen.org/alphanumeric-stepper"
+keywords = ["alphanumeric", "codec", "sequence", "serial", "radix"]
+categories = ["no-std", "encoding"]
+description = "A reversible alphanumeric sequence codec for compact serial codes like 000..999, A00..Z99, AA0..ZZ9, and AAA..ZZZ."
+license = "MIT"
+include = ["src/**/*", "Cargo.toml", "README.md", "LICENSE"]
+
+[dependencies]
+
+[features]
+default = ["std"]
+std = []
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
