@@ -39,16 +39,6 @@ assert_eq!(1100, stepper.decode("B00").unwrap());
 assert_eq!(27935, stepper.decode("ZZZ").unwrap());
 ```
 
-## Std
-
-Enable the `std` features to compile this crate with std.
-
-```toml
-[dependencies.alphanumeric-stepper]
-version = "*"
-features = ["std"]
-```
-
 ## Crates.io
 
 https://crates.io/crates/alphanumeric-stepper
