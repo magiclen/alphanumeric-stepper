@@ -1,6 +1,7 @@
-use core::fmt::{self, Display, Formatter};
-#[cfg(feature = "std")]
-use std::error::Error;
+use core::{
+    error::Error,
+    fmt::{self, Display, Formatter},
+};
 
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub enum AlphanumericStepperBuildError {
@@ -16,7 +17,6 @@ impl Display for AlphanumericStepperBuildError {
     }
 }
 
-#[cfg(feature = "std")]
 impl Error for AlphanumericStepperBuildError {}
 
 #[derive(Debug, Clone, PartialEq, Eq)]
@@ -33,7 +33,6 @@ impl Display for AlphanumericStepperEncodeError {
     }
 }
 
-#[cfg(feature = "std")]
 impl Error for AlphanumericStepperEncodeError {}
 
 #[derive(Debug, Clone, PartialEq, Eq)]
@@ -52,7 +51,6 @@ impl Display for AlphanumericStepperDecodeError {
     }
 }
 
-#[cfg(feature = "std")]
 impl Error for AlphanumericStepperDecodeError {}
 
 #[cfg(feature = "std")]
